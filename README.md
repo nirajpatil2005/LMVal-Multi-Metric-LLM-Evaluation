@@ -7,8 +7,8 @@
 
 **LMVal** is an advanced, open-source platform designed to bring rigor and clarity to the evaluation of Large Language Models (LLMs). Built with **LangChain** and **LangGraph**, it provides a comprehensive suite of metrics to quantitatively measure the quality, reliability, and accuracy of your LLM's responses, moving beyond subjective guesswork.
 
-![LMVal Dashboard Demo](https://via.placeholder.com/800x400/2D3748/FFFFFF?text=LMVal+Interactive+Dashboard) 
-*(Replace with a link to your actual screenshot/gif)*
+<img width="1918" height="977" alt="Image" src="https://github.com/user-attachments/assets/8c804a10-1614-418c-9a94-02964d17bcb2" />
+
 
 ## ✨ Why LMVal?
 
@@ -95,4 +95,5 @@ We've included a sample dataset (`demo_data.json`) to help you get started. This
   "model_responses": ["Paris is the capital city of France."],
   "contexts": ["France, in Western Europe, has Paris as its capital..."]
 }#
+
 
