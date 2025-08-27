@@ -1,0 +1,50 @@
+{
+  "questions": [
+    "What is the capital of France?",
+    "What is the main ingredient in guacamole?",
+    "Who developed the theory of relativity?",
+    "What planet is known as the Red Planet?",
+    "What year did the Titanic sink?",
+    "What is the largest mammal on Earth?",
+    "Who wrote the novel '1984'?",
+    "What is the chemical symbol for gold?",
+    "How many elements are in the periodic table?",
+    "What is the speed of light in a vacuum?"
+  ],
+  "ground_truths": [
+    "The capital of France is Paris.",
+    "The main ingredient in guacamole is avocado.",
+    "Albert Einstein developed the theory of relativity.",
+    "Mars is known as the Red Planet.",
+    "The Titanic sank in the year 1912.",
+    "The blue whale is the largest mammal on Earth.",
+    "George Orwell wrote the novel '1984'.",
+    "The chemical symbol for gold is Au.",
+    "As of now, there are 118 confirmed elements in the periodic table.",
+    "The speed of light in a vacuum is 299,792,458 meters per second."
+  ],
+  "model_responses": [
+    "Paris is the capital city of France.",
+    "The main ingredient in guacamole is tomato.",
+    "Isaac Newton developed the theory of relativity.",
+    "Mars is known as the Red Planet because of its rare red soil composition.",
+    "The Titanic was a huge ship that sank a long time ago after hitting a big iceberg in the ocean.",
+    "The African elephant is the largest mammal on Earth.",
+    "The author of the dystopian novel 1984 is George Orwell, the pen name of Eric Arthur Blair.",
+    "The chemical symbol for gold is Go, from its Latin name Golum.",
+    "There are exactly 120 elements in the periodic table, and scientists are not discovering any new ones.",
+    "Light travels at different speeds but is fastest in water."
+  ],
+  "contexts": [
+    "France, in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower.",
+    "Guacamole is an avocado-based dip, spread, or salad first developed in Mexico. In addition to its use in modern Mexican cuisine, it has become part of international and American cuisine as a dip, condiment and salad ingredient.",
+    "Albert Einstein was a German-born theoretical physicist, widely acknowledged to be one of the greatest and most influential physicists of all time. Einstein is best known for developing the theory of relativity.",
+    "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. The reddish appearance of its surface is caused by iron oxide, or rust.",
+    "The Titanic was a British passenger liner that sank in the North Atlantic Ocean in the early morning hours of 15 April 1912, after striking an iceberg during her maiden voyage from Southampton to New York City.",
+    "The blue whale is a marine mammal and a baleen whale. Reaching a maximum confirmed length of 29.9 meters and weighing up to 199 tonnes, it is the largest animal known to have ever existed.",
+    "Nineteen Eighty-Four is a dystopian novel and cautionary tale by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+    "Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. This places it among the higher atomic number elements that occur naturally.",
+    "The periodic table, also known as the periodic table of the elements, is an ordered arrangement of the chemical elements into rows and columns. As of 2024, 118 elements have been identified and officially recognized by IUPAC.",
+    "The speed of light in vacuum, commonly denoted c, is a universal physical constant that is exactly equal to 299,792,458 metres per second."
+  ]
+}

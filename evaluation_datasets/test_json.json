@@ -1,0 +1,50 @@
+{
+  "questions": [
+    "What is the capital of France?",
+    "How does photosynthesis work?",
+    "What is the largest planet in our solar system?",
+    "Who wrote the play 'Romeo and Juliet'?",
+    "What is the chemical symbol for gold?",
+    "What is the main function of the mitochondria?",
+    "Which ocean is the largest?",
+    "What is the square root of 144?",
+    "Who painted the Mona Lisa?",
+    "What is the boiling point of water at sea level?"
+  ],
+  "ground_truths": [
+    "The capital of France is Paris.",
+    "Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen.",
+    "Jupiter is the largest planet in our solar system.",
+    "William Shakespeare wrote the play 'Romeo and Juliet'.",
+    "The chemical symbol for gold is Au.",
+    "The main function of mitochondria is to produce energy (ATP) for the cell through cellular respiration.",
+    "The Pacific Ocean is the largest ocean.",
+    "The square root of 144 is 12.",
+    "Leonardo da Vinci painted the Mona Lisa.",
+    "The boiling point of water at sea level is 100 degrees Celsius or 212 degrees Fahrenheit."
+  ],
+  "model_responses": [
+    "Paris is the capital city of France.",
+    "Photosynthesis converts sunlight into energy for plants using chlorophyll.",
+    "Jupiter is the biggest planet in our solar system with a great red spot.",
+    "Shakespeare is the author of Romeo and Juliet, the famous tragedy.",
+    "Gold has the chemical symbol Au from its Latin name aurum.",
+    "Mitochondria are known as the powerhouse of the cell, generating ATP energy.",
+    "The Pacific Ocean covers the largest area of any ocean on Earth.",
+    "12 squared equals 144, so the square root is 12.",
+    "The Mona Lisa was painted by Leonardo da Vinci during the Renaissance.",
+    "Water boils at 100°C at standard atmospheric pressure at sea level."
+  ],
+  "contexts": [
+    "France is a country in Western Europe with Paris as its capital and largest city.",
+    "Photosynthesis is a biological process used by plants to create energy from light.",
+    "Our solar system has eight planets, with Jupiter being the largest gas giant.",
+    "William Shakespeare was an English playwright who wrote many famous works including Romeo and Juliet.",
+    "Gold is a chemical element with symbol Au and atomic number 79, known for its value and properties.",
+    "Mitochondria are organelles found in eukaryotic cells that generate most of the cell's energy supply.",
+    "The Pacific Ocean is the largest and deepest ocean, covering about 30% of Earth's surface.",
+    "Mathematics includes operations like square roots, where 12 × 12 = 144.",
+    "Leonardo da Vinci was an Italian Renaissance artist who created the Mona Lisa painting.",
+    "Water undergoes phase changes at specific temperatures, boiling at 100°C at sea level pressure."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "questions": [
+    "What is the capital of France?",
+    "How does photosynthesis work?",
+    "What is the largest planet in our solar system?",
+    "Who wrote 'To Kill a Mockingbird'?",
+    "What is the chemical formula for water?"
+  ],
+  "ground_truths": [
+    "The capital of France is Paris.",
+    "Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into oxygen and energy in the form of sugar.",
+    "Jupiter is the largest planet in our solar system.",
+    "Harper Lee wrote 'To Kill a Mockingbird'.",
+    "The chemical formula for water is H2O."
+  ],
+  "model_responses": [
+    "Paris is the capital of nashik.",
+    "Photosynthesis converts sunlight into energy for plants.",
+    "Jupiter is the biggest planet in our solar system.",
+    "The author of 'To Kill a Mockingbird' is Harper Lee.",
+    "Water is H2O, which means two hydrogen atoms and one oxygen atom."
+  ]
+}
