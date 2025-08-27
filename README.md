@@ -81,7 +81,7 @@ LMVal is built on a robust, agent-based architecture:
 3.  **Async Engine:** Handles concurrent evaluations efficiently using `asyncio`, making the process fast and scalable.
 4.  **Streamlit UI:** Provides an intuitive interface for configuring runs, visualizing results, and exploring detailed feedback.
 
-![LMVal Architecture Diagram](https://via.placeholder.com/600x300/2D3748/FFFFFF?text=LangGraph+Workflow+Diagram) 
+![Image](https://github.com/user-attachments/assets/5eec7f26-0382-4542-879c-935fd3021cdf)
 *(Consider creating a simple diagram of your LangGraph state machine)*
 
 ## 🧪 Example Evaluation
@@ -95,3 +95,4 @@ We've included a sample dataset (`demo_data.json`) to help you get started. This
   "model_responses": ["Paris is the capital city of France."],
   "contexts": ["France, in Western Europe, has Paris as its capital..."]
 }#
+
