@@ -31,7 +31,7 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/LMVal.git
+    git clone https://github.com/nirajpatil2005/LMVal.git
     cd LMVal
     ```
 
@@ -95,5 +95,6 @@ We've included a sample dataset (`demo_data.json`) to help you get started. This
   "model_responses": ["Paris is the capital city of France."],
   "contexts": ["France, in Western Europe, has Paris as its capital..."]
 }#
+
 
 
