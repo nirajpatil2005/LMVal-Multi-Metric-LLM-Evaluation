@@ -30,10 +30,38 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.12 or higher
 - A [Groq](https://console.groq.com/) API key (free tier available)
+- Docker installed (for option 1)
 
-### Installation
+### Option: 1 Docker
+
+1.  **Pull the latest image:**
+     ```bash
+    docker pull hssa123/llmeval:latest
+    ```
+2.  **Run the container:**
+    ```bash
+    docker run -d -p 8501:8501 --name llm-eval-app 
+    ```
+3.  **Access the application at:**
+    ```bash
+    http://localhost:8501
+    ```
+4.  **Some Useful commands for Docker:**
+    ```bash
+    # Stop and remove current container
+    docker stop llm-eval-app
+    docker rm llm-eval-app
+    
+    # Rebuild with compatible versions
+    docker build -t hssa123/llmeval .
+    
+    # Run again
+    docker run -d -p 8501:8501 --name llm-eval-app hssa123/llmeval
+    ```
+
+### Option: 2 Installation
 
 1.  **Clone the repository:**
     ```bash
