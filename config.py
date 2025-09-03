@@ -5,16 +5,28 @@ from pydantic_settings import BaseSettings
 load_dotenv()
 
 class Settings(BaseSettings):
-    # Groq API
+    # API Keys
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
-    DEFAULT_MODEL: str = os.getenv("DEFAULT_MODEL", "llama3-70b-8192")
+    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
     
-    # Available Groq models
-    AVAILABLE_MODELS: list = [
-        "llama3-70b-8192",
-        "llama3-8b-8192", 
-        "mixtral-8x7b-32768",
-        "gemma-7b-it"
+    # Default models
+    DEFAULT_GROQ_MODEL: str = os.getenv("DEFAULT_GROQ_MODEL", "openai/gpt-oss-20b")
+    DEFAULT_OPENAI_MODEL: str = os.getenv("DEFAULT_OPENAI_MODEL", "gpt-4o")
+    
+    # Available models
+    AVAILABLE_GROQ_MODELS: list = [
+        "openai/gpt-oss-20b",
+        "openai/gpt-oss-120b",
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant",
+        "meta-llama/llama-guard-4-12b"
+    ]
+    
+    AVAILABLE_OPENAI_MODELS: list = [
+        "gpt-4o",
+        "gpt-4-turbo",
+        "gpt-4",
+        "gpt-3.5-turbo"
     ]
     
     # Evaluation settings
@@ -25,6 +37,9 @@ class Settings(BaseSettings):
     # LangGraph settings
     MAX_CONCURRENT: int = 5
     TIMEOUT: int = 30
+    
+    # API Provider
+    DEFAULT_API_PROVIDER: str = os.getenv("DEFAULT_API_PROVIDER", "groq")
     
     class Config:
         env_file = ".env"

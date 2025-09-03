@@ -10,6 +10,10 @@ class MetricType(str, Enum):
     CONTEXT_PRECISION = "context_precision"
     CONTEXT_RECALL = "context_recall"
 
+class APIProvider(str, Enum):
+    GROQ = "groq"
+    OPENAI = "openai"
+
 class EvaluationRequest(BaseModel):
     model_config = ConfigDict(protected_namespaces=())
     
@@ -17,8 +21,9 @@ class EvaluationRequest(BaseModel):
     ground_truths: List[str] = Field(..., description="Ground truth answers")
     model_responses: Optional[List[str]] = Field(None, description="Model responses")
     metrics: List[MetricType] = Field(default=["accuracy", "faithfulness", "relevance"])
-    judge_model: str = Field(default="llama3-70b-8192")
+    judge_model: str = Field(default="openai/gpt-oss-20b")
     max_concurrent: int = Field(default=5, description="Max concurrent evaluations")
+    api_provider: APIProvider = Field(default=APIProvider.GROQ, description="API provider for evaluation")
 
 class EvaluationResult(BaseModel):
     model_config = ConfigDict(protected_namespaces=())
@@ -29,6 +34,7 @@ class EvaluationResult(BaseModel):
     metrics: Dict[MetricType, float]
     explanations: Dict[MetricType, str]
     processing_time: float
+    overall_score: float = Field(..., description="Overall weighted score (0-100)")
 
 class EvaluationSummary(BaseModel):
     model_config = ConfigDict(protected_namespaces=())
@@ -38,3 +44,5 @@ class EvaluationSummary(BaseModel):
     individual_results: List[EvaluationResult]
     total_processing_time: float
     model_used: str
+    api_provider: str
+    overall_score: float = Field(..., description="Overall weighted score across all questions")

@@ -1,4 +1,5 @@
 from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 import json
@@ -8,13 +9,27 @@ from .prompt_templates import PROMPT_MAP, EVALUATION_SYSTEM_MESSAGE
 from config import settings
 
 class EvaluationChains:
-    def __init__(self, model_name: str = None):
-        self.model_name = model_name or settings.DEFAULT_MODEL
-        self.llm = ChatGroq(
-            model_name=self.model_name,
-            temperature=0.1,
-            max_tokens=500
+    def __init__(self, model_name: str = None, api_provider: str = "groq"):
+        self.api_provider = api_provider
+        self.model_name = model_name or (
+            settings.DEFAULT_GROQ_MODEL if api_provider == "groq" 
+            else settings.DEFAULT_OPENAI_MODEL
         )
+        
+        if api_provider == "groq":
+            self.llm = ChatGroq(
+                model_name=self.model_name,
+                temperature=0.1,
+                max_tokens=500
+            )
+        elif api_provider == "openai":
+            self.llm = ChatOpenAI(
+                model_name=self.model_name,
+                temperature=0.1,
+                max_tokens=500
+            )
+        else:
+            raise ValueError(f"Unsupported API provider: {api_provider}")
     
     def create_evaluation_chain(self, metric: str):
         """Create a LangChain chain for a specific evaluation metric"""
