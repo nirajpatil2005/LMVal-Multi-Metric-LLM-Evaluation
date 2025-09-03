@@ -7,7 +7,10 @@
 
 **LMVal** is an advanced, open-source platform designed to bring rigor and clarity to the evaluation of Large Language Models (LLMs). Built with **LangChain** and **LangGraph**, it provides a comprehensive suite of metrics to quantitatively measure the quality, reliability, and accuracy of your LLM's responses, moving beyond subjective guesswork.
 
-<img width="1918" height="928" alt="Image" src="https://github.com/user-attachments/assets/ad0a9019-964b-4635-8a30-a00870c3bd6d" />
+**Watch Demo Video:**  
+See LMVal in action with this walkthrough demo:
+
+[![Watch Demo](assets/thumbnail.png)](https://github.com/user-attachments/assets/28c3bcf8-f8f7-4d8c-a250-3bf98b33e7af)
 
 ---
 
@@ -21,10 +24,7 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
 - **🤝 Transparent Scoring:** Every score comes with a natural language explanation, so you understand the *"why"* behind the grade.
 - **📁 Export Everything:** Generate detailed reports in JSON, CSV, or HTML for easy sharing and documentation.
 
-**Watch Demo Video:**  
-See LMVal in action with this walkthrough demo:
-
-[![Watch Demo](assets/thumbnail.png)](https://github.com/user-attachments/assets/28c3bcf8-f8f7-4d8c-a250-3bf98b33e7af)
+---
 
 ## 🚀 Quick Start
 
