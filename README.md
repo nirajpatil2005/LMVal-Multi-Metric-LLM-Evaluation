@@ -7,8 +7,9 @@
 
 **LMVal** is an advanced, open-source platform designed to bring rigor and clarity to the evaluation of Large Language Models (LLMs). Built with **LangChain** and **LangGraph**, it provides a comprehensive suite of metrics to quantitatively measure the quality, reliability, and accuracy of your LLM's responses, moving beyond subjective guesswork.
 
-<img width="1918" height="977" alt="Image" src="https://github.com/user-attachments/assets/8c804a10-1614-418c-9a94-02964d17bcb2" />
+<img width="1918" height="928" alt="Image" src="https://github.com/user-attachments/assets/ad0a9019-964b-4635-8a30-a00870c3bd6d" />
 
+---
 
 ## ✨ Why LMVal?
 
@@ -19,6 +20,8 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
 - **⚡ Concurrent Evaluation:** Leverage async processing to evaluate dozens of questions simultaneously, drastically reducing wait times.
 - **🤝 Transparent Scoring:** Every score comes with a natural language explanation, so you understand the *"why"* behind the grade.
 - **📁 Export Everything:** Generate detailed reports in JSON, CSV, or HTML for easy sharing and documentation.
+
+---
 
 ## 🚀 Quick Start
 
@@ -47,7 +50,9 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
     # set GROQ_API_KEY=your-api-key-here
     ```
 
-### Usage
+---
+
+## 📊 Usage
 
 1.  **Launch the web application:**
     ```bash
@@ -56,9 +61,25 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
 
 2.  **Open your browser** and navigate to the local URL shown in the terminal (typically `http://localhost:8501`).
 
-3.  **Configure your evaluation:** Select your metrics, judge model, and input your questions, ground truths, and model responses.
+3.  **Configure your evaluation:** Select API provider, metrics, judge model, and concurrency settings.  
 
-4.  **Run the evaluation:** Click "Run Evaluation" and watch as LMVal provides a detailed analysis of your LLM's performance.
+    <img width="1918" height="927" alt="Image" src="https://github.com/user-attachments/assets/d8cd6648-557e-47c1-8d8c-c1a5e94ddd2e" />
+
+4.  **Upload dataset or enter manually:**  
+    Provide questions, ground truths, model responses, and contexts.  
+
+    <img width="1918" height="926" alt="Image" src="https://github.com/user-attachments/assets/6754ca06-a90e-42ca-b5ce-edff438b0946" />
+
+5.  **Run the evaluation:** Click "Run Evaluation" and LMVal provides a detailed analysis of your LLM's performance.  
+
+    <img width="1918" height="928" alt="Image" src="https://github.com/user-attachments/assets/274146aa-6667-4be9-ae53-e25804bae524" />
+    <img width="1625" height="927" alt="Image" src="https://github.com/user-attachments/assets/c0bd234d-bada-411b-b4d1-36fa3bd60f04" />
+
+7.  **View history:** All runs are logged with timestamp, provider, model, and scores.  
+
+    <img width="1918" height="925" alt="Image" src="https://github.com/user-attachments/assets/510e2a0d-b38b-496b-81bb-5f6787ecb863" />
+
+---
 
 ## 📈 Supported Evaluation Metrics
 
@@ -73,16 +94,20 @@ LMVal evaluates responses based on a comprehensive set of metrics:
 | **Context Recall** | (For RAG) How much of the necessary information was retrieved. |
 | **Toxicity** | Detects harmful, offensive, or inappropriate content. |
 
+---
+
 ## 🏗️ How It Works: Architecture
 
 LMVal is built on a robust, agent-based architecture:
+
 1.  **Orchestration with LangGraph:** Coordinates the multi-step evaluation process, managing the state of each question as it flows through different metric evaluations.
 2.  **Evaluation Agents:** Specialized LangChain chains act as "judges" for each metric, using advanced prompting to provide consistent and reasoned scores.
 3.  **Async Engine:** Handles concurrent evaluations efficiently using `asyncio`, making the process fast and scalable.
 4.  **Streamlit UI:** Provides an intuitive interface for configuring runs, visualizing results, and exploring detailed feedback.
 
-![Image](https://github.com/user-attachments/assets/5eec7f26-0382-4542-879c-935fd3021cdf)
-*(Consider creating a simple diagram of your LangGraph state machine)*
+<img width="7183" height="2994" alt="Image" src="https://github.com/user-attachments/assets/a6d95ce3-e936-482b-b3c6-2ffb9d22fcfe" />
+
+---
 
 ## 🧪 Example Evaluation
 
@@ -94,7 +119,4 @@ We've included a sample dataset (`demo_data.json`) to help you get started. This
   "ground_truths": ["The capital of France is Paris."],
   "model_responses": ["Paris is the capital city of France."],
   "contexts": ["France, in Western Europe, has Paris as its capital..."]
-}#
-
-
-
+}
