@@ -1,0 +1,16 @@
+{
+  "questions": [
+    "What constitutes copyright infringement?",
+    "Explain the elements of a valid contract",
+    "What is the difference between civil and criminal law?",
+    "What are the requirements for fair use doctrine?",
+    "What is the statute of limitations for personal injury cases?"
+  ],
+  "ground_truths": [
+    "Copyright infringement occurs when someone violates any of the exclusive rights granted to copyright owners under copyright law, including reproduction, distribution, public performance, or creation of derivative works without permission.",
+    "A valid contract requires: offer, acceptance, consideration, mutual assent, capacity of parties, and legality of purpose. All elements must be present for a contract to be legally enforceable.",
+    "Civil law deals with disputes between individuals or organizations where compensation may be awarded, while criminal law involves offenses against the state prosecuted by government entities with potential penalties including imprisonment.",
+    "Fair use considers: purpose of use, nature of copyrighted work, amount used relative to whole work, and effect on potential market. Educational, commentary, and parody uses often qualify as fair use.",
+    "Statute of limitations for personal injury cases varies by jurisdiction but typically ranges from 1-3 years from date of injury discovery. Some exceptions apply for minors or delayed discovery of injuries."
+  ]
+}

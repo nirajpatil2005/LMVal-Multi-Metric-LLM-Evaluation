@@ -20,6 +20,7 @@ class EvaluationRequest(BaseModel):
     questions: List[str] = Field(..., description="Questions to evaluate")
     ground_truths: List[str] = Field(..., description="Ground truth answers")
     model_responses: Optional[List[str]] = Field(None, description="Model responses")
+    contexts: Optional[List[str]] = Field(None, description="Contexts for evaluation")
     metrics: List[MetricType] = Field(default=["accuracy", "faithfulness", "relevance"])
     judge_model: str = Field(default="openai/gpt-oss-20b")
     max_concurrent: int = Field(default=5, description="Max concurrent evaluations")

@@ -3,8 +3,9 @@ import asyncio
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
 
-from schemas.data_models import EvaluationRequest, EvaluationSummary, MetricType
+from schemas.data_models import EvaluationRequest, EvaluationSummary, APIProvider, MetricType
 from .graph_builder import EvaluationGraphBuilder
+from config import settings
 
 class EvaluationAgent:
     def __init__(self):
@@ -42,6 +43,11 @@ class EvaluationAgent:
                     "metrics": [m.value for m in request.metrics]
                 }
                 
+                # Add context if available and if context metrics are requested
+                context_metrics = ["context_precision", "context_recall"]
+                if any(m in context_metrics for m in [metric.value for metric in request.metrics]) and hasattr(request, 'contexts') and request.contexts:
+                    state["context"] = request.contexts[i] if i < len(request.contexts) else "No context provided."
+                
                 future = executor.submit(
                     self._run_evaluation,
                     graph,
@@ -61,8 +67,8 @@ class EvaluationAgent:
                         "question": state["question"],
                         "ground_truth": state["ground_truth"],
                         "model_response": state["model_response"],
-                        "metrics": {m: 0 for m in request.metrics},
-                        "explanations": {m: f"Evaluation failed: {str(e)}" for m in request.metrics},
+                        "metrics": {m.value: 0 for m in request.metrics},
+                        "explanations": {m.value: f"Evaluation failed: {str(e)}" for m in request.metrics},
                         "processing_time": 0,
                         "overall_score": 0
                     }

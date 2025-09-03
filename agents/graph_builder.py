@@ -70,9 +70,9 @@ class EvaluationGraphBuilder:
             "chain": chain
         }
         
-        # Add context for context-based metrics
-        if metric in ["context_precision", "context_recall"] and "context" in state:
-            tool_input["context"] = state["context"]
+        # Add context for context-based metrics (even if empty)
+        if metric in ["context_precision", "context_recall"]:
+            tool_input["context"] = state.get("context", "No context provided.")
         
         # Fix: Use the tool correctly with proper arguments
         result = evaluate_response.invoke(tool_input)

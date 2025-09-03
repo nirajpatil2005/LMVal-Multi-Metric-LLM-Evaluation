@@ -16,9 +16,9 @@ def evaluate_response(question: str, ground_truth: str, response: str, metric: s
             "response": response
         }
         
-        # Add context for context-based metrics
-        if metric in ["context_precision", "context_recall"] and context:
-            input_data["context"] = context
+        # Add context for context-based metrics (even if empty)
+        if metric in ["context_precision", "context_recall"]:
+            input_data["context"] = context if context else "No context provided."
         
         # Use invoke() instead of direct call to fix the tool calling issue
         result = chain.invoke(input_data)

@@ -1,0 +1,33 @@
+{
+  "name": "Medical RAG Evaluation Test Dataset",
+  "description": "Medical domain test data for evaluating RAG systems",
+  "version": "1.0",
+  "questions": [
+    "What are the symptoms of COVID-19?",
+    "How does mRNA vaccine technology work?",
+    "What is the recommended treatment for hypertension?",
+    "Explain the mechanism of action of aspirin",
+    "What are the diagnostic criteria for diabetes?"
+  ],
+  "ground_truths": [
+    "Common COVID-19 symptoms include fever, cough, fatigue, loss of taste or smell, sore throat, headache, and difficulty breathing. Severe cases may develop pneumonia or acute respiratory distress syndrome.",
+    "mRNA vaccines work by introducing a synthetic mRNA sequence that encodes for a specific viral protein. Cells use this mRNA to produce the protein, triggering an immune response that creates memory cells for future protection.",
+    "First-line hypertension treatment typically includes lifestyle modifications (diet, exercise) and medications such as ACE inhibitors, ARBs, calcium channel blockers, or thiazide diuretics, tailored to individual patient factors.",
+    "Aspirin works by irreversibly inhibiting cyclooxygenase enzymes (COX-1 and COX-2), reducing prostaglandin production which mediates pain, inflammation, and fever. It also has antiplatelet effects that reduce blood clotting.",
+    "Diabetes diagnosis typically requires: fasting plasma glucose ≥126 mg/dL, HbA1c ≥6.5%, random glucose ≥200 mg/dL with symptoms, or oral glucose tolerance test with 2-hour glucose ≥200 mg/dL."
+  ],
+  "model_responses": [
+    "COVID-19 can cause various symptoms like fever, coughing, and tiredness. Some people lose their sense of taste or smell. In bad cases, it can lead to breathing problems and lung issues.",
+    "mRNA vaccines use genetic material to teach cells to make a piece of the virus. The body then learns to recognize this and builds immunity against the real virus if exposed later.",
+    "Doctors usually recommend lifestyle changes first for high blood pressure, like eating healthier and exercising. If needed, they may prescribe medicines like ACE inhibitors or water pills.",
+    "Aspirin stops certain enzymes in the body that cause pain and swelling. It also makes blood less sticky so it doesn't clot as easily, which is why it's sometimes used for heart protection.",
+    "Diabetes is diagnosed through blood tests. Doctors look at fasting sugar levels, A1C percentages, or how your body handles sugar after drinking a special sweet drink."
+  ],
+  "contexts": [
+    "COVID-19, caused by the SARS-CoV-2 virus, presents with a wide range of symptoms from mild to severe. Common manifestations include respiratory symptoms (cough, shortness of breath), systemic symptoms (fever, fatigue), and neurological symptoms (loss of taste/smell). The disease severity varies significantly based on age, comorbidities, and immune status. Severe cases may progress to pneumonia, acute respiratory distress syndrome (ARDS), multi-organ failure, or death. Asymptomatic transmission is a significant feature of COVID-19 epidemiology.",
+    "mRNA vaccine technology represents a novel approach to immunization. These vaccines contain messenger RNA that encodes for a specific viral antigen. When administered, host cells take up the mRNA and use their own machinery to produce the viral protein. This protein is then displayed on cell surfaces, triggering both humoral and cellular immune responses. The immune system develops memory cells that provide protection against future infection. mRNA vaccines offer advantages in rapid development and manufacturing compared to traditional vaccine platforms.",
+    "Hypertension management follows a stepped approach beginning with lifestyle modifications: sodium restriction, DASH diet, regular physical activity, weight management, and alcohol moderation. Pharmacological therapy is initiated based on blood pressure levels and cardiovascular risk. First-line agents include thiazide diuretics, ACE inhibitors, angiotensin receptor blockers, and calcium channel blockers. Combination therapy is often required. Treatment goals are typically <130/80 mmHg for most adults, with individualized targets based on age and comorbidities.",
+    "Aspirin (acetylsalicylic acid) exerts its effects through irreversible acetylation of cyclooxygenase (COX) enzymes. This inhibition prevents the conversion of arachidonic acid to prostaglandin H2, thereby reducing downstream production of prostaglandins, thromboxanes, and prostacyclins. The antiplatelet effect results from inhibition of thromboxane A2 synthesis in platelets. Aspirin's anti-inflammatory, analgesic, and antipyretic properties are primarily due to reduced prostaglandin synthesis. The drug exhibits different dose-dependent effects: low doses for antiplatelet activity and higher doses for anti-inflammatory effects.",
+    "Diabetes mellitus diagnosis is based on specific laboratory criteria established by organizations like the American Diabetes Association. The fasting plasma glucose test requires ≥126 mg/dL after an 8-hour fast. The HbA1c test measures average blood glucose over 2-3 months with ≥6.5% indicating diabetes. Random plasma glucose ≥200 mg/dL with classic symptoms also confirms diagnosis. The oral glucose tolerance test involves measuring glucose 2 hours after a 75g glucose load, with ≥200 mg/dL indicating diabetes. Diagnosis should be confirmed with repeat testing unless unequivocal hyperglycemia with metabolic decompensation is present."
+  ]
+}

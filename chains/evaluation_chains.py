@@ -37,14 +37,34 @@ class EvaluationChains:
         if not prompt:
             raise ValueError(f"Unknown metric: {metric}")
         
-        chain = (
-            RunnablePassthrough()
-            | prompt
-            | self.llm
-            | StrOutputParser()
-            | self._parse_json_response
-        )
+        # Handle context-based metrics differently
+        if metric in ["context_precision", "context_recall"]:
+            chain = (
+                RunnablePassthrough()
+                | self._prepare_context_input
+                | prompt
+                | self.llm
+                | StrOutputParser()
+                | self._parse_json_response
+            )
+        else:
+            chain = (
+                RunnablePassthrough()
+                | prompt
+                | self.llm
+                | StrOutputParser()
+                | self._parse_json_response
+            )
+        
         return chain
+    
+    def _prepare_context_input(self, input_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Prepare input for context-based metrics"""
+        # For context-based metrics, we need to ensure context is provided
+        # If context is not provided, use a default empty context
+        if "context" not in input_data or not input_data["context"]:
+            input_data["context"] = "No context provided for evaluation."
+        return input_data
     
     def _parse_json_response(self, response: str) -> Dict[str, Any]:
         """Parse JSON response from LLM"""
