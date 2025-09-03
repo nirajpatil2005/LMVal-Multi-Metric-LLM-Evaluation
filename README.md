@@ -21,7 +21,10 @@ Evaluating LLM outputs is complex and often subjective. LMVal solves this by pro
 - **🤝 Transparent Scoring:** Every score comes with a natural language explanation, so you understand the *"why"* behind the grade.
 - **📁 Export Everything:** Generate detailed reports in JSON, CSV, or HTML for easy sharing and documentation.
 
----
+**Watch Demo Video:**  
+See LMVal in action with this walkthrough demo:
+
+[![Watch Demo](assets/thumbnail.png)](https://github.com/user-attachments/assets/28c3bcf8-f8f7-4d8c-a250-3bf98b33e7af)
 
 ## 🚀 Quick Start
 
