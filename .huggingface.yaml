@@ -1,0 +1,3 @@
+sdk: docker
+app_file: Dockerfile
+port: 8501
