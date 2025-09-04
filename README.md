@@ -6,6 +6,11 @@
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
 
 **LMVal** is an advanced, open-source platform designed to bring rigor and clarity to the evaluation of Large Language Models (LLMs). Built with **LangChain** and **LangGraph**, it provides a comprehensive suite of metrics to quantitatively measure the quality, reliability, and accuracy of your LLM's responses, moving beyond subjective guesswork.
+## 🚀 Live Demo
+
+Try out LMVal instantly on Hugging Face Spaces:
+
+[![Hugging Face Space](https://img.shields.io/badge/%F0%9F%A4%97%20Try%20on-Hugging%20Face-blue)](https://huggingface.co/spaces/NIRAJz/LMVal-Multi-Metric-LLM-Evaluation)
 
 **Watch Demo Video:**  
 See LMVal in action with this walkthrough demo:
