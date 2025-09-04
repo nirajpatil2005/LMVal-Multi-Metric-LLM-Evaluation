@@ -141,7 +141,7 @@ LMVal is built on a robust, agent-based architecture:
 3.  **Async Engine:** Handles concurrent evaluations efficiently using `asyncio`, making the process fast and scalable.
 4.  **Streamlit UI:** Provides an intuitive interface for configuring runs, visualizing results, and exploring detailed feedback.
 
-<img width="7183" height="2994" alt="Image" src="https://github.com/user-attachments/assets/a6d95ce3-e936-482b-b3c6-2ffb9d22fcfe" />
+<img width="826" height="761" alt="Image" src="https://github.com/user-attachments/assets/1cf43322-45bf-4a77-867e-cf6b28208599" />
 
 ---
 
